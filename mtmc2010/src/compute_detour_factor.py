@@ -1,4 +1,5 @@
 from utils_mtmc.get_mtmc_files import *
+from pathlib import Path
 
 
 def compute_detour_factor():
@@ -48,9 +49,9 @@ def compute_detour_factor():
         df_etappen['routed_distance_in_km'] / df_etappen['crowflies_distance_in_km']
     print('Global correction factor (average):', df_etappen['Ratio routed distance / crowflies distance'].mean())
     print('Correction factor for cars and motorbikes (average):',
-          df_etappen[df_etappen['main_transport_mode'] == 'MIV']['Ratio routed distance / crowflies distance'].mean())
+          df_etappen[df_etappen['main_transport_mode'] == 'Cars and motorbikes']['Ratio routed distance / crowflies distance'].mean())
     print('Correction factor for public transport (average):',
-          df_etappen[df_etappen['main_transport_mode'] == 'OeV']['Ratio routed distance / crowflies distance'].mean())
+          df_etappen[df_etappen['main_transport_mode'] == 'Public transport']['Ratio routed distance / crowflies distance'].mean())
     bins = [0, 5, 10, 25, 50, 75, 100, np.inf]
     names = ['Between 0.5 and 5 km',
              'Between 5 and 10 km',
@@ -60,9 +61,12 @@ def compute_detour_factor():
              'Between 75 and 100 km',
              'More than 100 km']
     df_etappen['distance_categories'] = pd.cut(df_etappen['routed_distance_in_km'], bins, labels=names)
+    results_by_mode_and_distance_category = df_etappen.groupby(['main_transport_mode',
+                                                                'distance_categories'])['Ratio routed distance / ' \
+                                                                                        'crowflies distance'].mean()
     print('Correction factor by transport mode and distance categories (average):',
-          df_etappen.groupby(['main_transport_mode', 'distance_categories'])
-          ['Ratio routed distance / crowflies distance'].mean())
+          results_by_mode_and_distance_category)
+    results_by_mode_and_distance_category.to_csv(Path('mtmc' + str(year) + '/data/results/detour_factor.csv'))
 
 
 if __name__ == '__main__':
