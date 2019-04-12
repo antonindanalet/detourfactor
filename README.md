@@ -1,12 +1,30 @@
-# detourfactor
+# Detour factors from the Mobility and Transport Microcensus 2010 and 2015
 Computing the detour factor
 
-Results 2010:
+## Results 2010
 
-Global correction factor (average): 1.5756666170518643
+Global correction factor (average): 
 
-Correction factor for cars and motorbikes (average): 1.572999312032314
+Correction factor for cars and motorbikes (average): 
 
-Correction factor for public transport (average): 1.3540305311111502
+Correction factor for public transport (average): 
 
-Correction factor by transport mode and distance categories (average): see CSV-file
+Correction factor by transport mode and distance categories (average, weighted average, median & 20th percentile), see CSV-files:
+- detour_factor_avg.csv
+- detour_factor_weighted_avg.csv
+- detour_factor_median.csv
+- detour_factor_20thpercentile.csv
+
+## Results 2015
+
+Global correction factor (average): 
+
+Correction factor for cars and motorbikes (average): 
+
+Correction factor for public transport (average): 
+
+Correction factor by transport mode and distance categories (average, weighted average, median & 20th percentile), see CSV-files:
+- detour_factor_avg.csv
+- detour_factor_weighted_avg.csv
+- detour_factor_median.csv
+- detour_factor_20thpercentile.csv
