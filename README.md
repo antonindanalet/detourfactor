@@ -3,28 +3,26 @@ Computing the detour factor
 
 ## Results 2010
 
-Global correction factor (average): 
+Global correction factor (weighted average): 
 
-Correction factor for cars and motorbikes (average): 
+Correction factor for cars and motorbikes (weighted average): 
 
-Correction factor for public transport (average): 
+Correction factor for public transport (weighted average): 
 
 Correction factor by transport mode and distance categories (average, weighted average, median & 20th percentile), see CSV-files:
-- detour_factor_avg.csv
 - detour_factor_weighted_avg.csv
 - detour_factor_median.csv
 - detour_factor_20thpercentile.csv
 
 ## Results 2015
 
-Global correction factor (average): 
+Global correction factor (weighted average): 
 
-Correction factor for cars and motorbikes (average): 
+Correction factor for cars and motorbikes (weighted average): 
 
-Correction factor for public transport (average): 
+Correction factor for public transport (weighted average): 
 
 Correction factor by transport mode and distance categories (average, weighted average, median & 20th percentile), see CSV-files:
-- detour_factor_avg.csv
 - detour_factor_weighted_avg.csv
 - detour_factor_median.csv
 - detour_factor_20thpercentile.csv
