@@ -4,13 +4,13 @@ from pathlib import Path
 
 def compute_detour_factor():
     year = 2010
-    selected_columns = ['pseudo', 'GIS_km_ch_o', 'ldist', 'f51300']  # , 'S_X', 'Z_X', 'S_Y', 'Z_Y']
+    selected_columns = ['pseudo', 'rdist', 'ldist', 'f51300', 'WP']  # , 'S_X', 'Z_X', 'S_Y', 'Z_Y']
     df_etappen = get_etappen(year, selected_columns=selected_columns)
     # Removing pseudo trip legs
     df_etappen = df_etappen[df_etappen['pseudo'] == 1]
     del df_etappen['pseudo']
     # Rename columns
-    df_etappen = df_etappen.rename(columns={'GIS_km_ch_o': 'routed_distance_in_km'})
+    df_etappen = df_etappen.rename(columns={'rdist': 'routed_distance_in_km'})
     df_etappen = df_etappen.rename(columns={'ldist': 'crowflies_distance_in_km'})
     df_etappen = df_etappen.rename(columns={'f51300': 'transport_mode'})
     # Aggregate transport modes into 4 categories
@@ -40,18 +40,17 @@ def compute_detour_factor():
     # Remove round legs (e.g., from home to home) in public transport
     # df_etappen = df_etappen[((df_etappen['S_X'] != df_etappen['Z_X']) | (df_etappen['S_Y'] != df_etappen['Z_Y']))]
     # Remove legs where no crow flies distance is available (i.e., quality of start of end point are not good enough)
-    df_etappen = df_etappen[df_etappen['crowflies_distance_in_km'] > 0.0]
+    df_etappen = df_etappen[df_etappen['crowflies_distance_in_km'] > 0.5]
     # Remove trip legs without routing
     # Remove legs with distance smaller than 500 meters (according to routing)
     df_etappen = df_etappen[df_etappen['routed_distance_in_km'] >= 0.5]
     # Compute the ratio
-    df_etappen['Ratio routed distance / crowflies distance'] = \
-        df_etappen['routed_distance_in_km'] / df_etappen['crowflies_distance_in_km']
-    print('Global correction factor (average):', df_etappen['Ratio routed distance / crowflies distance'].mean())
+    df_etappen['Detour factor'] = df_etappen['routed_distance_in_km'] / df_etappen['crowflies_distance_in_km']
+    print('Global correction factor (average):', df_etappen['Detour factor'].mean())
     print('Correction factor for cars and motorbikes (average):',
-          df_etappen[df_etappen['main_transport_mode'] == 'Cars and motorbikes']['Ratio routed distance / crowflies distance'].mean())
+          df_etappen[df_etappen['main_transport_mode'] == 'Cars and motorbikes']['Detour factor'].mean())
     print('Correction factor for public transport (average):',
-          df_etappen[df_etappen['main_transport_mode'] == 'Public transport']['Ratio routed distance / crowflies distance'].mean())
+          df_etappen[df_etappen['main_transport_mode'] == 'Public transport']['Detour factor'].mean())
     bins = [0, 5, 10, 25, 50, 75, 100, np.inf]
     names = ['Between 0.5 and 5 km',
              'Between 5 and 10 km',
@@ -61,12 +60,21 @@ def compute_detour_factor():
              'Between 75 and 100 km',
              'More than 100 km']
     df_etappen['distance_categories'] = pd.cut(df_etappen['routed_distance_in_km'], bins, labels=names)
-    results_by_mode_and_distance_category = df_etappen.groupby(['main_transport_mode',
-                                                                'distance_categories'])['Ratio routed distance / ' \
-                                                                                        'crowflies distance'].mean()
-    print('Correction factor by transport mode and distance categories (average):',
-          results_by_mode_and_distance_category)
-    results_by_mode_and_distance_category.to_csv(Path('mtmc' + str(year) + '/data/results/detour_factor.csv'))
+    grouped_df_by_mode_and_distance_category = df_etappen.groupby(['main_transport_mode', 'distance_categories'])
+    folder_for_results = Path('mtmc' + str(year) + '/data/results/')
+    ''' Results: weighted average '''
+    weigthed_average_by_group = grouped_df_by_mode_and_distance_category.apply(
+        lambda x: (x['Detour factor'] * x['WP']).sum() / x['WP'].sum())
+    print('Correction factor by transport mode and distance categories (weighted average):', weigthed_average_by_group)
+    weigthed_average_by_group.to_csv(folder_for_results / 'detour_factor_weighted_avg.csv', header='Detour factor')
+    ''' Results: median '''
+    median_by_group = grouped_df_by_mode_and_distance_category['Detour factor'].median()
+    print('Correction factor by transport mode and distance categories (median):', median_by_group)
+    median_by_group.to_csv(folder_for_results / 'detour_factor_median.csv', header='Detour factor')
+    ''' Results: 20th percentile '''
+    percentile_by_group = grouped_df_by_mode_and_distance_category['Detour factor'].quantile(q=0.8)
+    print('Correction factor by transport mode and distance categories (20th percentile):', percentile_by_group)
+    percentile_by_group.to_csv(folder_for_results / 'detour_factor_20thpercentile.csv', header='Detour factor')
 
 
 if __name__ == '__main__':
