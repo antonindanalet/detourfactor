@@ -1,28 +1,28 @@
 main_transport_mode,distance_categories,Detour factor
-Cars and motorbikes,Between 0.5 and 5 km,1.6980003535762629
-Cars and motorbikes,Between 5 and 10 km,1.580500462275344
-Cars and motorbikes,Between 10 and 25 km,1.6072699113271125
-Cars and motorbikes,Between 25 and 50 km,1.6864367330025076
-Cars and motorbikes,Between 50 and 75 km,1.7130907848187975
-Cars and motorbikes,Between 75 and 100 km,1.6772129475858129
-Cars and motorbikes,More than 100 km,1.6810103631660116
-Other,Between 0.5 and 5 km,1.7494768912805114
-Other,Between 5 and 10 km,2.336285271020366
-Other,Between 10 and 25 km,2.6430394497462086
-Other,Between 25 and 50 km,2.0341567802087512
-Other,Between 50 and 75 km,1.7572750911158872
-Other,Between 75 and 100 km,1.8058658359439337
-Other,More than 100 km,1.5747278989507456
-Public transport,Between 0.5 and 5 km,1.4743768399683943
-Public transport,Between 5 and 10 km,1.4925459095124725
-Public transport,Between 10 and 25 km,1.4431330299505383
-Public transport,Between 25 and 50 km,1.402184100864955
-Public transport,Between 50 and 75 km,1.4337922894702815
-Public transport,Between 75 and 100 km,1.4035554670347108
-Public transport,More than 100 km,1.5108892405177408
-Walking and cycling,Between 0.5 and 5 km,2.3808961401518403
-Walking and cycling,Between 5 and 10 km,2.9787067001592167
-Walking and cycling,Between 10 and 25 km,2.6269060188271456
-Walking and cycling,Between 25 and 50 km,4.177409826855921
-Walking and cycling,Between 50 and 75 km,6.434010567795609
-Walking and cycling,Between 75 and 100 km,1.7252392960380813
+Cars and motorbikes,Between 0.5 and 5 km,1.8928740067073178
+Cars and motorbikes,Between 5 and 10 km,1.8605161494907354
+Cars and motorbikes,Between 10 and 25 km,1.8801427580977914
+Cars and motorbikes,Between 25 and 50 km,2.0010211294612708
+Cars and motorbikes,Between 50 and 75 km,2.0172531591057665
+Cars and motorbikes,Between 75 and 100 km,1.9190011680895822
+Cars and motorbikes,More than 100 km,1.8283151302741976
+Other,Between 0.5 and 5 km,1.9730819361305407
+Other,Between 5 and 10 km,3.3001563891899064
+Other,Between 10 and 25 km,3.397453269921725
+Other,Between 25 and 50 km,3.308144174601831
+Other,Between 50 and 75 km,2.471961342783656
+Other,Between 75 and 100 km,3.098705352299582
+Other,More than 100 km,1.6651755885207224
+Public transport,Between 0.5 and 5 km,1.695342121421569
+Public transport,Between 5 and 10 km,1.7289248436913034
+Public transport,Between 10 and 25 km,1.6282484396111971
+Public transport,Between 25 and 50 km,1.6124107923690028
+Public transport,Between 50 and 75 km,1.4963532082605013
+Public transport,Between 75 and 100 km,1.5109148542155022
+Public transport,More than 100 km,1.6540678938223685
+Walking and cycling,Between 0.5 and 5 km,2.179089876737735
+Walking and cycling,Between 5 and 10 km,4.476001673047158
+Walking and cycling,Between 10 and 25 km,4.576669621318554
+Walking and cycling,Between 25 and 50 km,6.4654025436795814
+Walking and cycling,Between 50 and 75 km,29.006595673659504
+Walking and cycling,Between 75 and 100 km,1.8504781743130234
