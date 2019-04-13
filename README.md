@@ -10,7 +10,7 @@ Correction factor for cars and motorbikes (weighted average): 1.54
 Correction factor for public transport (weighted average): 1.34
 
 Correction factor by transport mode and distance categories (average, weighted average, median & 20th percentile), see CSV-files:
-- detour_factor_weighted_avg.csv
+- <a href="https://github.com/antonindanalet/detourfactor/blob/master/mtmc2010/data/results/detour_factor_weighted_avg.csv">detour_factor_weighted_avg.csv</a>
 - detour_factor_median.csv
 - detour_factor_20thpercentile.csv
 
