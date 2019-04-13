@@ -11,8 +11,8 @@ Correction factor for public transport (weighted average): 1.34
 
 Correction factor by transport mode and distance categories (average, weighted average, median & 20th percentile), see CSV-files:
 - <a href="https://github.com/antonindanalet/detourfactor/blob/master/mtmc2010/data/results/detour_factor_weighted_avg.csv">detour_factor_weighted_avg.csv</a>
-- detour_factor_median.csv
-- detour_factor_20thpercentile.csv
+- <a href="https://github.com/antonindanalet/detourfactor/blob/master/mtmc2010/data/results/detour_factor_median.csv">detour_factor_median.csv</a>
+- <a href="https://github.com/antonindanalet/detourfactor/blob/master/mtmc2010/data/results/detour_factor_20thpercentile.csv">detour_factor_20thpercentile.csv</a>
 
 ## Results 2015
 
@@ -23,6 +23,6 @@ Correction factor for cars and motorbikes (weighted average): 1.47
 Correction factor for public transport (weighted average): 1.33
 
 Correction factor by transport mode and distance categories (average, weighted average, median & 20th percentile), see CSV-files:
-- detour_factor_weighted_avg.csv
-- detour_factor_median.csv
-- detour_factor_20thpercentile.csv
+- <a href="https://github.com/antonindanalet/detourfactor/blob/master/mtmc2015/data/results/detour_factor_weighted_avg.csv">detour_factor_weighted_avg.csv</a>
+- <a href="https://github.com/antonindanalet/detourfactor/blob/master/mtmc2015/data/results/detour_factor_median.csv">detour_factor_median.csv</a>
+- <a href="https://github.com/antonindanalet/detourfactor/blob/master/mtmc2015/data/results/detour_factor_20thpercentile.csv">detour_factor_20thpercentile.csv</a>
