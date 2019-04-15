@@ -1,5 +1,5 @@
 # Detour factors from the Mobility and Transport Microcensus 2010 and 2015
-This code computes the detour factor for public transport and cars and motorbikes, by distance categories. To know more about the detour factor, check e.g.:
+This code computes the detour factor for public transport and cars and motorbikes, by distance categories (0.5-5km, 5-10km, 10-25km, 25-50km, 50-75km, 75-100km, 100+km). To know more about the detour factor, check e.g.:
 
 Chalasani, V. Saikumar, O. Engebretsen, et K. W. Axhausen. <a href="https://www.bts.gov/archive/publications/journal_of_transportation_and_statistics/volume_08_number_02/paper_01/index">Precision of Geocoded Locations and Network Distance Estimates</a>. Journal of Transportation and Statistics 8, nᵒ 2 (2005): 15.
 
