@@ -2,7 +2,7 @@ from utils_mtmc.get_mtmc_files import *
 from pathlib import Path
 
 
-def compute_detour_factor():
+def compute_detour_factor_2010():
     year = 2010
     selected_columns = ['pseudo', 'rdist', 'ldist', 'f51300', 'WP']
     df_etappen = get_etappen(year, selected_columns=selected_columns)
@@ -78,4 +78,4 @@ def compute_detour_factor():
 
 
 if __name__ == '__main__':
-    compute_detour_factor()
+    compute_detour_factor_2010()
