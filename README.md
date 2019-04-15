@@ -3,7 +3,7 @@ This code computes the detour factor for public transport and cars and motorbike
 
 Chalasani, V. Saikumar, O. Engebretsen, et K. W. Axhausen. <a href="https://www.bts.gov/archive/publications/journal_of_transportation_and_statistics/volume_08_number_02/paper_01/index">Precision of Geocoded Locations and Network Distance Estimates</a>. Journal of Transportation and Statistics 8, nᵒ 2 (2005): 15.
 
-This code uses data from the Mobility and Transport Microcensus (<a href="www.are.admin.ch/mtmc">MTMC</a>) 2010 and 2015. The results are available as CSV-files.
+This code uses data from the Mobility and Transport Microcensus (<a href="www.are.admin.ch/mtmc">MTMC</a>) 2010 and 2015. The results are available as CSV-files. They have also been published on Twitter in <a href="https://twitter.com/AntoninDanalet/status/1117688900791734273">English</a>, <a href="https://twitter.com/AntoninDanalet/status/1117815752348901376">French</a> and <a href="https://twitter.com/AntoninDanalet/status/1117870640097263616">German</a>.
 
 ## Results 
 
