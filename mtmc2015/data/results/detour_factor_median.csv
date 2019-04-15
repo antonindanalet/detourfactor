@@ -6,6 +6,12 @@ Cars and motorbikes,Between 25 and 50 km,1.3757555326887079
 Cars and motorbikes,Between 50 and 75 km,1.4255977787856886
 Cars and motorbikes,Between 75 and 100 km,1.4142666729741515
 Cars and motorbikes,More than 100 km,1.4233862460742914
+Cycling,Between 0.5 and 5 km,1.3007789052586163
+Cycling,Between 5 and 10 km,1.4340416960294942
+Cycling,Between 10 and 25 km,1.415410809324626
+Cycling,Between 25 and 50 km,1.5946129454476223
+Cycling,Between 50 and 75 km,1.8694067376062762
+Cycling,Between 75 and 100 km,1.349522661213255
 Other,Between 0.5 and 5 km,1.3002590525951063
 Other,Between 5 and 10 km,1.4298540528603951
 Other,Between 10 and 25 km,1.457454783594202
@@ -20,9 +26,7 @@ Public transport,Between 25 and 50 km,1.2539801268627915
 Public transport,Between 50 and 75 km,1.2768065809472633
 Public transport,Between 75 and 100 km,1.212394460720587
 Public transport,More than 100 km,1.2569428127242328
-Walking and cycling,Between 0.5 and 5 km,1.299768299331774
-Walking and cycling,Between 5 and 10 km,1.5740492034420923
-Walking and cycling,Between 10 and 25 km,1.4894838688991392
-Walking and cycling,Between 25 and 50 km,1.5617988368711198
-Walking and cycling,Between 50 and 75 km,1.8694067376062762
-Walking and cycling,Between 75 and 100 km,1.349522661213255
+Walking,Between 0.5 and 5 km,1.2010808039397927
+Walking,Between 5 and 10 km,2.0908670843876824
+Walking,Between 10 and 25 km,1.909968099325051
+Walking,Between 25 and 50 km,1.204515748089264

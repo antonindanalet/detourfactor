@@ -14,8 +14,8 @@ def compute_detour_factor_2015():
     df_etappen = df_etappen.rename(columns={'ldist': 'crowflies_distance_in_km'})
     df_etappen = df_etappen.rename(columns={'f51300': 'transport_mode'})
     # Aggregate transport modes into 4 categories
-    dict_detailed_mode2main_mode_2015 = {1: 'Walking and cycling',  # Zu Fuss -> LV
-                                         2: 'Walking and cycling',  # Velo -> LV
+    dict_detailed_mode2main_mode_2015 = {1: 'Walking',  # Zu Fuss
+                                         2: 'Cycling',  # Velo -> LV
                                          3: 'Cars and motorbikes',  # Mofa, Motorfahrrad
                                          4: 'Cars and motorbikes',  # Kleinmotorrad
                                          5: 'Cars and motorbikes',  # Motorrad als Fahrer
@@ -52,6 +52,9 @@ def compute_detour_factor_2015():
     df_etappen_PT_only = df_etappen[df_etappen['main_transport_mode'] == 'Public transport']
     print('Correction factor for public transport (weighted average):',
           np.average(df_etappen_PT_only['Detour factor'], weights=df_etappen_PT_only['WP']))
+    df_etappen_biking_only = df_etappen[df_etappen['main_transport_mode'] == 'Cycling']
+    print('Correction factor for biking (weighted average):',
+          np.average(df_etappen_biking_only['Detour factor'], weights=df_etappen_biking_only['WP']))
     bins = [0, 5, 10, 25, 50, 75, 100, np.inf]
     names = ['Between 0.5 and 5 km',
              'Between 5 and 10 km',
