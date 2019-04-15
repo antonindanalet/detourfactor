@@ -72,10 +72,10 @@ def compute_detour_factor_2015():
     median_by_group = grouped_df_by_mode_and_distance_category['Detour factor'].median()
     print('Correction factor by transport mode and distance categories (median):', median_by_group)
     median_by_group.to_csv(folder_for_results / 'detour_factor_median.csv', header='Detour factor')
-    ''' Results: 20th percentile '''
+    ''' Results: 10th percentile '''
     percentile_by_group = grouped_df_by_mode_and_distance_category['Detour factor'].quantile(q=0.9)
-    print('Correction factor by transport mode and distance categories (20th percentile):', percentile_by_group)
-    percentile_by_group.to_csv(folder_for_results / 'detour_factor_20thpercentile.csv', header='Detour factor')
+    print('Correction factor by transport mode and distance categories (10th percentile):', percentile_by_group)
+    percentile_by_group.to_csv(folder_for_results / 'detour_factor_10thpercentile.csv', header='Detour factor')
 
 
 if __name__ == '__main__':

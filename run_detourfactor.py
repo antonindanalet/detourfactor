@@ -8,4 +8,4 @@ def run_detourfactor():
 
 
 if __name__ == '__main__':
-    compute_detour_factor_2010()
+    run_detourfactor()
