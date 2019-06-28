@@ -49,7 +49,7 @@ For it to produce the results, you also need the raw data of the Transport and M
 
 ### Run the code
 
-Please copy the files <em>etappen.csv</em> from 2010 and <em>etappen.csv</em> from 2015 that you receive from FSO in the folders "mtmc2010/data/source" and "mtmc2015/data/source" respectively. Then run <em>run_detourfactor.py</em>. 
+Please copy the files <em>etappen.csv</em> from 2010 and <em>etappen.csv</em> from 2015 that you receive from FSO in the folders "<a href="https://github.com/antonindanalet/detourfactor/tree/master/mtmc2010/data/source">mtmc2010/data/source</a>" and "<a href="https://github.com/antonindanalet/detourfactor/tree/master/mtmc2015/data/source">mtmc2015/data/source</a>" respectively. Then run <em>run_detourfactor.py</em>. 
 
 DO NOT commit or share in any way these two CSV-files! These are personal data.
 
