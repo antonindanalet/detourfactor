@@ -32,6 +32,8 @@ Correction factor for public transport (weighted average): 1.33
 
 Correction factor for bikes (weighted average; careful: not based on routed distances, but on distances estimated by the respondent): 1.61
 
+Correction factor for walking (weighted average; careful: not based on routed distances, but on distances estimated by the respondent): 1.53
+
 Correction factor by transport mode and distance categories (weighted average, median & 10th percentile), see CSV-files:
 - <a href="https://github.com/antonindanalet/detourfactor/blob/master/mtmc2015/data/results/detour_factor_weighted_avg.csv">detour_factor_weighted_avg.csv</a>
 - <a href="https://github.com/antonindanalet/detourfactor/blob/master/mtmc2015/data/results/detour_factor_median.csv">detour_factor_median.csv</a>
