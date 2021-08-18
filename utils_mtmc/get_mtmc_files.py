@@ -72,9 +72,8 @@ def get_hh(year, selected_columns=None):
 
 def get_etappen(year, selected_columns=None):
     if year == 2015:
-        with open(folder_path_2015 / 'etappen.csv', 'r', errors='ignore') as etappen_file:
+        with open(folder_path_2015 / 'etappen.csv', 'r', encoding='iso-8859-1') as etappen_file:
             df_etappen = pd.read_csv(etappen_file,
-                                     encoding='iso-8859-1',
                                      dtype={'HHNR': int,
                                             'W_AGGLO_GROESSE2012': int},
                                      usecols=selected_columns)

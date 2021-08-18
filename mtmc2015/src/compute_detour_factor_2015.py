@@ -55,6 +55,9 @@ def compute_detour_factor_2015():
     df_etappen_biking_only = df_etappen[df_etappen['main_transport_mode'] == 'Cycling']
     print('Correction factor for biking (weighted average):',
           np.average(df_etappen_biking_only['Detour factor'], weights=df_etappen_biking_only['WP']))
+    df_etappen_walking_only = df_etappen[df_etappen['main_transport_mode'] == 'Walking']
+    print('Correction factor for walking (weighted average):',
+          np.average(df_etappen_walking_only['Detour factor'], weights=df_etappen_walking_only['WP']))
     bins = [0, 5, 10, 25, 50, 75, 100, np.inf]
     names = ['Between 0.5 and 5 km',
              'Between 5 and 10 km',
