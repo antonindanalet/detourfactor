@@ -54,7 +54,3 @@ For it to produce the results, you also need the raw data of the Transport and M
 Please copy the files <em>etappen.csv</em> from 2010 and <em>etappen.csv</em> from 2015 that you receive from the Swiss Federal Statistical Office (FSO) in the folders "<a href="https://github.com/antonindanalet/detourfactor/tree/master/mtmc2010/data/source">mtmc2010/data/source</a>" and "<a href="https://github.com/antonindanalet/detourfactor/tree/master/mtmc2015/data/source">mtmc2015/data/source</a>" respectively. Then run <a href="https://github.com/antonindanalet/detourfactor/blob/master/run_detourfactor.py">run_detourfactor.py</a>. 
 
 DO NOT commit or share in any way these two CSV-files! These are personal data.
-
-## Contact
-
-Please don't hesitate to contact me if you have questions or comments about this code: antonin.danalet@are.admin.ch
